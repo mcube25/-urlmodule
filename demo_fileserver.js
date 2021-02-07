@@ -9,13 +9,11 @@ http.createServer(function(req, res){
     if (err){
       res.writeHead(404, {'content-type':'text/html'});
       return res.end(404, 'Not found');
-      res.writeHead(200, {'Content-Type': 'text/html'});
-   res.write(data);
-   return res.end();
 
     }
-  })
-})
-res.writeHead(200, {'Content-Type': 'text/html'});
-   res.write(data);
-   return res.end();
+    res.writeHead(200, {'content-type':'text/html'});
+    res.write(data);
+    return res.end();
+  });
+});
+  listen(8080)
