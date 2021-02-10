@@ -25,3 +25,9 @@ http.createServer(function(req, res){
   res.write(uc.upperCase('hallo world'));
   res.end();
 }).listen(8080);
+//events in node js
+var fs = require('fs');
+var rs = fs.createreadstream('./demofile.txt');
+rs.on('open' function(){
+  console.log('the file is opoen')
+});
