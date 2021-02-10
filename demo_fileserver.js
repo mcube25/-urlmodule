@@ -31,3 +31,6 @@ var rs = fs.createreadstream('./demofile.txt');
 rs.on('open' function(){
   console.log('the file is opoen')
 });
+//events module
+var events = require('events');
+var eventEmitter = new events.eventEmitter();
