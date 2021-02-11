@@ -34,3 +34,7 @@ rs.on('open' function(){
 //events module
 var events = require('events');
 var eventEmitter = new events.eventEmitter();
+//the event emitter object
+//to fire an event use the emit() method
+var events = require('events');
+var eventEmitter = new events.eventEmitter();
