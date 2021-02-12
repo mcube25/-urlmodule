@@ -38,3 +38,10 @@ var eventEmitter = new events.eventEmitter();
 //to fire an event use the emit() method
 var events = require('events');
 var eventEmitter = new events.eventEmitter();
+//create an eventhandler
+var myEventHandler = function (){
+  console.log('i hear a scream');
+}
+//assign the eventhandler to an event
+eventEmitter.on('scream', myEventHandler);
+eventEmitter.emit('scream');
