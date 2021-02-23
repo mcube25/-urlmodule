@@ -45,3 +45,25 @@ var myEventHandler = function (){
 //assign the eventhandler to an event
 eventEmitter.on('scream', myEventHandler);
 eventEmitter.emit('scream');
+
+
+//node.js upload file
+//the formidable module
+//install formidable
+//npm install formidable
+//include the module in any application
+var formidable = require('formidable');
+//create a node.js file that writes a html form with an upload field
+var http = require('http');
+http.createServer(function (req, res){
+  res.writeHead(200, {'content-type':'text/html'});
+  res.write('<form-action="fileupload" method="post" enctype="multipart/form-data">');
+  res.write('<input type="file" name="filetoupload"><br>');
+  res.write('<input type="submit">');
+  res.write('</form>');
+  return res.end();
+}).listen(8080);
+//save the file
+var http = require('http');
+var formidable = require('formidable');
+var fs = require('fs');
