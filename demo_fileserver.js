@@ -67,4 +67,8 @@ http.createServer(function (req, res){
 var http = require('http');
 var formidable = require('formidable');
 var fs = require('fs');
-var 
+http.createServer(function(req, res){
+  if(req.url == '\fileupload'){
+    
+  }
+})
