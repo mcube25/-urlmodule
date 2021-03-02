@@ -71,6 +71,8 @@ http.createServer(function(req, res){
   if(req.url == '\fileupload'){
     var form = new formidable.IncomingForm();
     form.parse(req, function(err, fields, files){
+      var oldpath = files.filetoupload.path;
+      var newpath =  'C:/Users/Your Name/' + files.filetoupload.name;
       
     })
   }
