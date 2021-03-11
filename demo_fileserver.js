@@ -87,3 +87,5 @@ http.createServer(function(req, res){
     return res.end();
   }
 }).listen(8080);
+//node mailer module
+//it can be downloaded and installed using npm
