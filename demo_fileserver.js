@@ -89,3 +89,41 @@ http.createServer(function(req, res){
 }).listen(8080);
 //node mailer module
 //it can be downloaded and installed using npm
+//download and install the node mailer module
+//after installing it can be used in any application
+var nodemailer = require('nodemailer');
+
+
+//send an email
+var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'mcube3567@gmail.com',
+    pass: 'mypassword'
+  }
+});
+
+var mailOptions = {
+  from: 'mymail@gmail.com',
+  to: 'mywife@yahoo.com',
+  subject: 'sending mail with node.js',
+  text: 'that was easy',
+};
+
+transporter.sendMail(mailOptions, function(error, info){
+  if (error){
+    console.log(error);
+  }else{
+    console.log('email sent'+ info.response);
+  }
+});
+//server now ready to send emails
+
+//multiple receivers
+//send mail to more than one address
+var mailOptions = {
+  from: 'mcube3567@gmail.com',
+  to: 'myfriend@yahoo.com, myotherfriend@yahoo.com',
+  subject: 'sending mail with node.js',
+  text: 'that was easy',
+}
