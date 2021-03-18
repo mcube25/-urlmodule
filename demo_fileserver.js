@@ -127,3 +127,11 @@ var mailOptions = {
   subject: 'sending mail with node.js',
   text: 'that was easy',
 }
+//send html
+//send email containing html
+var mailOptions = {
+  from: 'mcube3567@gmail.com',
+  to: 'myfriend@yahoo.com, myotherfriend@yahoo.com',
+  subject: 'sending mail with node.js',
+  html: '<h1>Welcome</h1><p>That was easy!</p>'
+}
