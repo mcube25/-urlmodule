@@ -11,3 +11,7 @@ var con = mysql.createConnection({
   user: "yourusername",
   password: "yourpassword"
 });
+con.connect(function(err){
+  if(err)throw err;
+  console.log("connected!")
+});
