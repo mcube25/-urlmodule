@@ -15,3 +15,12 @@ con.connect(function(err){
   if(err)throw err;
   console.log("connected!")
 });
+//query a database
+con.connect(function(err){
+  if(err) throw err
+    console.log("connected!")
+  con.query(sql, function(err, result){
+    if (err) throw error
+    console.log("Result :" + result);
+  })
+})
