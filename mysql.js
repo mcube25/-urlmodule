@@ -24,3 +24,6 @@ con.connect(function(err){
     console.log("Result :" + result);
   })
 })
+//creating a database
+//to create a database in mysql use the CREATE DATABASE STATEMENT
+//example
