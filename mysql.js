@@ -82,3 +82,5 @@ con.connect(function(err) {
     console.log("Table altered");
   });
 });
+//to fill tables in MySql use the "INSERT INTO" statement
+//example insert a record in the customers table
