@@ -96,4 +96,12 @@ con.connect(function(err) {
   console.log("Connected!");
 var sql = "INSERT INTO customers (name, address) VALUES ('Company Inc', 'Highway 37')";
 con.query(sql, function (err, result) {
-  
+  //insert multiple records
+  var mysql = require('mysql');
+
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "yourusername",
+  password: "yourpassword",
+  database: "mydb"
+});
