@@ -130,3 +130,16 @@ con.connect(function(err) {
     console.log("Number of records inserted: " + result.affectedRows);
   });
 });
+//when executing a query a result object is returned
+//the result object contains information on how the query affected the table
+{
+  fieldCount: 0,
+  affectedRows: 14,
+  insertId: 0,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '\'Records:14  Duplicated: 0  Warnings: 0',
+  protocol41: true,
+  changedRows: 0
+}
+//example of result query returned above
