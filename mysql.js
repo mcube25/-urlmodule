@@ -143,3 +143,21 @@ con.connect(function(err) {
   changedRows: 0
 }
 //example of result query returned above
+//Get inserted id
+var mysql = require('mysql');
+
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "yourusername",
+  password: "yourpassword",
+  database: "mydb"
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  var sql = "INSERT INTO customers (name, address) VALUES ('Michelle', 'Blue Village 1')";
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log("1 record inserted, ID: " + result.insertId);
+  });
+});
